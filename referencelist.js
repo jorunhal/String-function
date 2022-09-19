@@ -38,4 +38,11 @@ class ReferenceList {
         }
         return false;
     }
+    allIndicesOf(value) {
+        let indices = [];
+        for (let entry of this.entries) {
+            if (entry["value"] === value) indices.push(entry["index"]);
+        }
+        return indices;
+    }
 }
